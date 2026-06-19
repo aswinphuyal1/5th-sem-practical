@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main() {
-float arrival_rate = 2.0;
+float arrival_rate = 1.0;
 float service_time_sec = 20.0;
 float service_rate = 60.0 / service_time_sec;
 float travel_to_seat_min = 1.5;
