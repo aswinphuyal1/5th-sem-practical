@@ -30,7 +30,8 @@ int main() {
 char text[100], encrypted[100], decrypted[100]; int shift;
 printf("Compiled by Aswin phuyal\n");
 printf("==============================\n");
-printf("	Caesar Cipher Program\n"); printf("==============================\n");
+printf("	Caesar Cipher Program\n");
+printf("==============================\n");
 
 printf("Enter the text: "); scanf("%s", text);
 
