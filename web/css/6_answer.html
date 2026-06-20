@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Menu</title>
+    <style>
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background: black;
+        }
+
+        li {
+            display: inline-block;
+            position: relative;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        a:hover {
+            background: gray;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: lightgray;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li><a href="#">Home</a></li>
+
+    <li class="dropdown">
+        <a href="#">Services</a>
+        <div class="dropdown-content">
+            <a href="#">Web Design</a>
+            <a href="#">Web Development</a>
+        </div>
+    </li>
+
+    <li><a href="#">Contact</a></li>
+</ul>
+
+</body>
+</html>

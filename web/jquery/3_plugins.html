@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Plugins Demo</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        #slider {
+            width: 200px;
+            height: 20px;
+            background: lightgray;
+            margin: 10px 0;
+        }
+
+        #panel {
+            display: none;
+            padding: 10px;
+            background: lightblue;
+        }
+
+        #toast {
+            display: none;
+            background: black;
+            color: white;
+            padding: 10px;
+            width: 120px;
+        }
+
+        img {
+            width: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Slider</h3>
+    <input type="range">
+
+    <h3>Accordion</h3>
+    <button id="acc">Open Section</button>
+    <div id="panel">Accordion Content</div>
+
+    <h3>Zoom</h3>
+    <img src="https://via.placeholder.com/150" id="img">
+
+    <h3>Toast Message</h3>
+    <button id="toastBtn">Show Toast</button>
+    <div id="toast">Message Sent!</div>
+
+    <script>
+        $("#acc").click(function() {
+            $("#panel").slideToggle();
+        });
+
+        $("#img").hover(
+            function() {
+                $(this).css("transform", "scale(1.2)");
+            },
+            function() {
+                $(this).css("transform", "scale(1)");
+            }
+        );
+
+        $("#toastBtn").click(function() {
+            $("#toast").fadeIn().delay(1000).fadeOut();
+        });
+    </script>
+
+</body>
+</html>

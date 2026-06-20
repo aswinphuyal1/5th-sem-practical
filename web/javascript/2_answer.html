@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+    <h2>Arithmetic Calculator</h2>
+
+    Number 1:
+    <input type="number" id="num1"><br><br>
+
+    Number 2:
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function calculate(op) {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            let ans;
+
+            if (op == '+') ans = a + b;
+            else if (op == '-') ans = a - b;
+            else if (op == '*') ans = a * b;
+            else if (op == '/') ans = a / b;
+
+            document.getElementById("result").innerHTML =
+                "Result = " + ans;
+        }
+    </script>
+
+</body>
+</html>

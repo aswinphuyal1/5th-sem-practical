@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Append and Prepend</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <p id="text">Welcome</p>
+
+    <button id="append">Append</button>
+    <button id="prepend">Prepend</button>
+
+    <script>
+        $("#append").click(function() {
+            $("#text").append(" to jQuery");
+        });
+
+        $("#prepend").click(function() {
+            $("#text").prepend("Hello! ");
+        });
+    </script>
+
+</body>
+</html>
