@@ -1,0 +1,41 @@
+1. What are stylesheets? How to use CSS internally and externally?
+<!doctype html>
+<html>
+  <head>
+    <title>CSS Stylesheets</title>
+    <!-- Internal CSS -->
+    <style>
+      h1 {
+        color: blue;
+      }
+      p {
+        color: green;
+      }
+    </style>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="1_style.css" />
+  </head>
+  <body>
+    <h1>What are Stylesheets?</h1>
+    <p>
+      Stylesheets are used to define the visual style and layout of HTML
+      elements.
+    </p>
+
+    <h2>Internal CSS</h2>
+    <p>
+      Internal CSS is written inside the &lt;style&gt; tag in the &lt;head&gt;
+      section.
+    </p>
+    <p>Example: The h1 and p styles above are internal CSS.</p>
+
+    <h2>External CSS</h2>
+    <p>
+      External CSS is written in a separate .css file and linked using
+      &lt;link&gt; tag.
+    </p>
+    <p>Example: The 1_style.css file is linked externally.</p>
+
+    <h3 class="external-style">This text uses external CSS</h3>
+  </body>
+</html>
