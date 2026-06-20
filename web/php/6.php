@@ -1,1 +1,0 @@
-6. Show the use of session variables to create a login authentication system.
