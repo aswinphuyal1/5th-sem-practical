@@ -1,0 +1,62 @@
+3. Create a CSS floating template of the following pattern
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Floating Template</title>
+    <style>
+        .container {
+            width: 300px;
+            border: 1px solid black;
+        }
+
+        .box {
+            border: 1px solid black;
+            height: 70px;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .full { width: 100%; }
+        .half { width: 50%; }
+        .third { width: 33.33%; }
+        .fourth { width: 25%; }
+        .fifth { width: 20%; }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="box full"></div>
+    <div class="clear"></div>
+
+    <div class="box half"></div>
+    <div class="box half"></div>
+    <div class="clear"></div>
+
+    <div class="box third"></div>
+    <div class="box third"></div>
+    <div class="box third"></div>
+    <div class="clear"></div>
+
+    <div class="box fourth"></div>
+    <div class="box fourth"></div>
+    <div class="box fourth"></div>
+    <div class="box fourth"></div>
+    <div class="clear"></div>
+
+    <div class="box fifth"></div>
+    <div class="box fifth"></div>
+    <div class="box fifth"></div>
+    <div class="box fifth"></div>
+    <div class="box fifth"></div>
+    <div class="clear"></div>
+
+</div>
+
+</body>
+</html>
