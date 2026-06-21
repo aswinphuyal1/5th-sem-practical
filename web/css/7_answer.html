@@ -1,58 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Media Query</title>
-    <style>
-        /* Flexbox */
-        .flex {
-            display: flex;
-        }
+    <head>
+<style>
+.flex{display:flex}
+.grid{display:grid;grid-template-columns:1fr 1fr}
 
-        .flex div {
-            padding: 20px;
-            border: 1px solid black;
-        }
+@media(max-width:600px){
+  .flex{flex-direction:column}
+  .grid{grid-template-columns:1fr}
+}
+</style>
+    </head>
+<div class="flex">
+  <div>A</div><div>B</div>
+</div>
 
-        /* Grid */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 5px;
-            margin-top: 20px;
-        }
-
-        .grid div {
-            padding: 20px;
-            border: 1px solid black;
-        }
-
-        /* Media Query */
-        @media (max-width: 600px) {
-            .flex {
-                flex-direction: column;
-            }
-
-            .grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-
-    <h3>Flexbox Layout</h3>
-    <div class="flex">
-        <div>Box 1</div>
-        <div>Box 2</div>
-        <div>Box 3</div>
-    </div>
-
-    <h3>Grid Layout</h3>
-    <div class="grid">
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>
-    </div>
-
-</body>
+<div class="grid">
+  <div>1</div><div>2</div>
+</div>
 </html>
