@@ -1,33 +1,31 @@
-<!DOCTYPE html>
+<!-- A Regular Expression (RegEx) is a pattern used to match, search, and validate text strings.
+ It is commonly used for validating form inputs such as email addresses, phone numbers, passwords, etc. -->
+ <!DOCTYPE html>
 <html>
-<head>
-    <title>Form Validation</title>
-</head>
 <body>
 
-    <h2>Email Validation</h2>
-
+<form onsubmit="return validateForm()">
     Email:
     <input type="text" id="email">
-    <button onclick="validate()">Submit</button>
+    <input type="submit" value="Submit">
+</form>
 
-    <p id="result"></p>
+<script>
+function validateForm() {
+    let email = document.getElementById("email").value;
 
-    <script>
-        function validate() {
-            let email = document.getElementById("email").value;
+    // Regular Expression for email validation
+    let pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            let pattern = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
-
-            if (pattern.test(email)) {
-                document.getElementById("result").innerHTML =
-                    "Valid Email";
-            } else {
-                document.getElementById("result").innerHTML =
-                    "Invalid Email";
-            }
-        }
-    </script>
+    if (pattern.test(email)) {
+        alert("Valid Email");
+        return true;
+    } else {
+        alert("Invalid Email");
+        return false;
+    }
+}
+</script>
 
 </body>
 </html>
